@@ -8,11 +8,13 @@ import java.util.Stack;
 public class Stacks {
 
     /**
-     * stack.empty() 스택이 비어있으면 true, 비어 있지 않으면 false 반환 (boolean)
-     * stack.peek() 스택의 제일 상단에 위치한 요소를 반환함
-     * stack.pop() 스택의 제일 상단의 있는 요소를 반환하고 삭제함
-     * stack.push() 스택의 제일 상단의 있는 요소에 push()의 argument 값을 삽입 (값이 바뀌는게 아닌 추가)
-     * stack.search() search()의 argument 값을 스택에서 찾아서 값이 존재하는 index 를 알려줌 index 의 위치를 계산하는 기준은 최상단에서 부터 0이 아닌 1부터 시작함
+     * stack.empty(): 스택이 비어있으면 true, 비어 있지 않으면 false 반환 (boolean)
+     * stack.peek(): 스택의 제일 상단에 위치한 요소를 반환함
+     * stack.pop(): 스택의 제일 상단의 있는 요소를 반환하고 삭제함
+     * stack.push(): 스택의 제일 상단의 있는 요소에 push()의 argument 값을 삽입 (값이 바뀌는게 아닌 추가)
+     * stack.search(): search()의 argument 값을 스택에서 찾아서 값이 존재하는 index 를 알려줌 index 의 위치를 계산하는 기준은 최상단에서 부터 0이 아닌 1부터 시작함
+     * stack.size(): 스택의 크기만큼 return
+     * stack.contains(): contains()의 argument 값이 스택에 존재한다면 true 반환 존재하지 않는다면 false 반환
      */
     public static void main(String[] args) {
         Stack<Integer> stack = new Stack<>();
