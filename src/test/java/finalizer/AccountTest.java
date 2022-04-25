@@ -43,19 +43,6 @@ class AccountTest {
         //transfer 10000000 from 블랙리스트 to martial
     }
 
-    @Test
-    void 완전한객체로_생성() throws InterruptedException {
-
-        try {
-            Account account = new FinalizerAccount("블랙리스트");
-        } catch (Exception ex) {
-            System.out.println("블랙리스트의 공격이 성공함");
-        }
-
-        System.gc();
-        Thread.sleep(3000L);
-        //actual: actual: java.lang.IllegalArgumentException: 블랙 리스트는 접근이 불가능합니다.
-    }
 
     @Test
     @DisplayName("가비지 컬렉터를 호출하지 않는다면?")
@@ -66,6 +53,8 @@ class AccountTest {
         } catch (Exception ex) {
             System.out.println("블랙리스트의 공격이 성공함");
         }
+
+        Thread.sleep(3000L);
         //actual: 블랙리스트의 공격이 성공함
     }
 }
