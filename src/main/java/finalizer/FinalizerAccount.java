@@ -6,8 +6,8 @@ public class FinalizerAccount extends Account {
         super(name);
     }
 
-    @Override
-    protected void finalize() throws Throwable {
-        this.transfer(10000000, "martial");
-    }
+//    @Override
+//    protected void finalize() throws Throwable {
+//        this.transfer(10000000, "martial");
+//    }
 }
