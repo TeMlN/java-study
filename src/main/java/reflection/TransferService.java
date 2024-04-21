@@ -1,7 +1,6 @@
 package reflection;
 
 public class TransferService {
-    private int amount;
 
     public void transfer(int amount) {
         System.out.println("martial님이" + amount + "원 만큼 송금하였습니다.");
