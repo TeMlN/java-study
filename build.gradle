@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id "io.franzbecker.gradle-lombok" version "3.0.0"
+    id 'org.jetbrains.kotlin.jvm'
 }
 
 group 'org.example'
@@ -19,8 +20,19 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testAnnotationProcessor 'org.projectlombok:lombok'
     testCompileOnly 'org.projectlombok:lombok'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 }
 
 test {
     useJUnitPlatform()
+}
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "11"
+    }
 }
